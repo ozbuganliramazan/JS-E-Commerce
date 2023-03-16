@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins';
+}
+
+/* ÜST KISIM */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  padding: 10px;
+}
+header h1 {
+  white-space: nowrap;
+}
+input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.buttons button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.buttons button:nth-child(1) {
+  background-color: black;
+}
+.buttons button:nth-child(2) {
+  background-color: blue;
+}
+.buttons button:nth-child(3) {
+  background-color: red;
+}
+
+/* KATEGORİLER */
+.category-wrapper {
+  padding: 30px;
+}
+
+.category-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.category {
+  max-width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.category span {
+  position: absolute;
+  bottom: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 70%;
+  text-align: center;
+}
+
+/* ÜRÜNLER */
+
+.product-wrapper {
+  padding: 30px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+@media (max-width: 700px) {
+  .product-list {
+    justify-content: center;
+  }
+}
+
+.product {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-info {
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.product-info span {
+  letter-spacing: 1px;
+}
+
+.product-info button {
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* shift + alt + alt ok */
+
+/* MODAL */
+
+.modal-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(128, 128, 128, 0.356);
+  top: 0;
+  display: none;
+  place-items: center;
+}
+.modal {
+  width: 50vw;
+  height: 70vw;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+.modal h1 {
+  text-align: center;
+}
+.modal img {
+  width: 60px;
+  position: absolute;
+}
+.active {
+  display: grid;
+}
+
+.sepetItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.sepetItem h2 {
+  font-size: 17px;
+}
+.sepetItem h2:nth-child(2) {
+  color: green;
+}
+
+#modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow: auto;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.toplam {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: bold;
+}
+
+#fiyat {
+}
